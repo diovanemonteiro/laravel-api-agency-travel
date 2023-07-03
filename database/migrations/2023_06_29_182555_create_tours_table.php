@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->date('starting_date');
             $table->date('ending_date');
-            $table->date('price');
+            $table->integer('price');
             $table->timestamps();
         });
     }
