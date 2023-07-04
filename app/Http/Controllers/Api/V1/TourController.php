@@ -46,5 +46,4 @@ class TourController extends Controller
 
         return TourResource::collection($tours);
     }
-
 }
