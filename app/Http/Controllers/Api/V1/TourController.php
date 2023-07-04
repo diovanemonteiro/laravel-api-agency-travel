@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ToursListRequest;
 use App\Http\Resources\TourResource;
 use App\Models\Travel;
-use Illuminate\Http\Request;
 
 class TourController extends Controller
 {
@@ -24,7 +23,7 @@ class TourController extends Controller
         //         'sortOrder' => "The 'sortOrder' parameter accepts only 'asc' and 'desc' values",
         //     ]
         // );
-        
+
         $tours = $travel->tours()
             ->when($request->priceFrom, function ($query) use ($request) {
                 $query->where('price', '>=', $request->priceFrom * 100);

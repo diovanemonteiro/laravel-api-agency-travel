@@ -5,13 +5,12 @@ namespace Tests\Feature;
 use App\Models\Tour;
 use App\Models\Travel;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class ToursListTest extends TestCase
 {
     use RefreshDatabase;
-    
+
     /**
      * A basic feature test example.
      */
@@ -19,7 +18,7 @@ class ToursListTest extends TestCase
     {
         $travel = Travel::factory()->create();
         $tour = Tour::factory()->create([
-            'travel_id' => $travel->id
+            'travel_id' => $travel->id,
         ]);
 
         $response = $this->get('/api/v1/travels/'.$travel->slug.'/tours');
@@ -104,7 +103,7 @@ class ToursListTest extends TestCase
             'ending_date' => now()->addDays(1),
         ]);
 
-        $response = $this->get('/api/v1/travels/' . $travel->slug . '/tours?sortBy=price&sortOrder=asc');
+        $response = $this->get('/api/v1/travels/'.$travel->slug.'/tours?sortBy=price&sortOrder=asc');
 
         $response->assertStatus(200);
         $response->assertJsonPath('data.0.id', $cheapEarlierTour->id);
@@ -126,9 +125,9 @@ class ToursListTest extends TestCase
             'price' => 100,
         ]);
 
-        $endpoint = '/api/v1/travels/' . $travel->slug . '/tours';
+        $endpoint = '/api/v1/travels/'.$travel->slug.'/tours';
 
-        $response = $this->get($endpoint . '?priceFrom=100');
+        $response = $this->get($endpoint.'?priceFrom=100');
         $response->assertJsonCount(2, 'data');
         $response->assertJsonFragment(['id' => $cheapTour->id]);
         $response->assertJsonFragment(['id' => $expensiveTour->id]);
@@ -176,31 +175,31 @@ class ToursListTest extends TestCase
             'ending_date' => now()->addDays(1),
         ]);
 
-        $endpoint = '/api/v1/travels/' . $travel->slug . '/tours';
+        $endpoint = '/api/v1/travels/'.$travel->slug.'/tours';
 
-        $response = $this->get($endpoint . '?dateFrom=' . now()->format('Y-m-d'));
+        $response = $this->get($endpoint.'?dateFrom='.now()->format('Y-m-d'));
         $response->assertJsonCount(2, 'data');
         $response->assertJsonFragment(['id' => $earlierTour->id]);
         $response->assertJsonFragment(['id' => $laterTour->id]);
 
-        $response = $this->get($endpoint . '?dateFrom=' . now()->addDay()->format('Y-m-d'));
+        $response = $this->get($endpoint.'?dateFrom='.now()->addDay()->format('Y-m-d'));
         $response->assertJsonCount(1, 'data');
         $response->assertJsonMissing(['id' => $earlierTour->id]);
         $response->assertJsonFragment(['id' => $laterTour->id]);
 
-        $response = $this->get($endpoint . '?dateFrom=' . now()->addDays(5)->format('Y-m-d'));
+        $response = $this->get($endpoint.'?dateFrom='.now()->addDays(5)->format('Y-m-d'));
         $response->assertJsonCount(0, 'data');
 
         $response = $this->get($endpoint.'?dateTo='.now()->addDays(5)->format('Y-m-d'));
         $response->assertJsonCount(2, 'data');
         $response->assertJsonFragment(['id' => $earlierTour->id]);
         $response->assertJsonFragment(['id' => $laterTour->id]);
-    
+
         $response = $this->get($endpoint.'?dateTo='.now()->addDay()->format('Y-m-d'));
         $response->assertJsonCount(1, 'data');
         $response->assertJsonMissing(['id' => $laterTour->id]);
         $response->assertJsonFragment(['id' => $earlierTour->id]);
-    
+
         $response = $this->get($endpoint.'?dateTo='.now()->subDay()->format('Y-m-d'));
         $response->assertJsonCount(0, 'data');
 
@@ -214,10 +213,10 @@ class ToursListTest extends TestCase
     {
         $travel = Travel::factory()->create();
 
-        $response = $this->getJson('/api/v1/travels/' . $travel->slug . '/tours?dateFrom=abcde');        
+        $response = $this->getJson('/api/v1/travels/'.$travel->slug.'/tours?dateFrom=abcde');
         $response->assertStatus(422);
 
-        $response = $this->getJson('/api/v1/travels/' . $travel->slug . '/tours?priceFrom=abcde');        
+        $response = $this->getJson('/api/v1/travels/'.$travel->slug.'/tours?priceFrom=abcde');
         $response->assertStatus(422);
     }
 }

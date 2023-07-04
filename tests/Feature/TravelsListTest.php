@@ -4,13 +4,12 @@ namespace Tests\Feature;
 
 use App\Models\Travel;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class TravelsListTest extends TestCase
 {
     use RefreshDatabase;
-    
+
     /**
      * A basic feature test example.
      */
@@ -36,8 +35,8 @@ class TravelsListTest extends TestCase
 
     public function test_travels_list_shows_only_public_records(): void
     {
-        $notPublicTravel= Travel::factory()->create(['is_public' => false]);
-        $publicTravel= Travel::factory()->create(['is_public' => true]);
+        $notPublicTravel = Travel::factory()->create(['is_public' => false]);
+        $publicTravel = Travel::factory()->create(['is_public' => true]);
 
         $response = $this->get('api/v1/travels');
 
