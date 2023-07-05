@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "TravelAPI",
-        "_postman_id": "d18563a1-5d8c-4f5f-9fc3-1dd5c26aaeee",
+        "_postman_id": "66ca8da1-d9c5-41c8-8e96-514fb10ae265",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"is_public\":true,\"name\":\"est\",\"description\":\"dolores\",\"number_of_days\":14}"
+                            "raw": "{\"is_public\":true,\"name\":\"ea\",\"description\":\"illum\",\"number_of_days\":9}"
                         },
                         "description": "Creates a new Travel record."
                     },
@@ -90,7 +90,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"quia\",\"starting_date\":\"2023-07-05T18:27:37\",\"ending_date\":\"2068-05-12\",\"price\":48533.851353}"
+                            "raw": "{\"name\":\"illo\",\"starting_date\":\"2023-07-05T18:41:26\",\"ending_date\":\"2057-10-11\",\"price\":22177.46}"
                         },
                         "description": "",
                         "auth": {
@@ -129,7 +129,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"is_public\":true,\"name\":\"laboriosam\",\"description\":\"consequatur\",\"number_of_days\":20}"
+                            "raw": "{\"is_public\":true,\"name\":\"deleniti\",\"description\":\"architecto\",\"number_of_days\":14}"
                         },
                         "description": "Updates new Travel record."
                     },
@@ -176,7 +176,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"alberto.hayes@example.net\",\"password\":\"bXR$}A\"}"
+                            "raw": "{\"email\":\"pamela37@example.com\",\"password\":\"?~M5*~hiDvRi1\"}"
                         },
                         "description": "Login with the existing user.",
                         "auth": {

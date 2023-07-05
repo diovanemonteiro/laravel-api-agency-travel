@@ -33,28 +33,28 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: est
+        example: ea
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: true
-        example: dolores
+        example: illum
         type: string
         custom: []
       number_of_days:
         name: number_of_days
         description: ''
         required: true
-        example: 14
+        example: 9
         type: integer
         custom: []
     cleanBodyParameters:
       is_public: true
-      name: est
-      description: dolores
-      number_of_days: 14
+      name: ea
+      description: illum
+      number_of_days: 9
     fileParameters: []
     responses:
       -
@@ -108,35 +108,35 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: quia
+        example: illo
         type: string
         custom: []
       starting_date:
         name: starting_date
         description: 'Must be a valid date.'
         required: true
-        example: '2023-07-05T18:27:37'
+        example: '2023-07-05T18:41:26'
         type: string
         custom: []
       ending_date:
         name: ending_date
         description: 'Must be a valid date. Must be a date after <code>starting_date</code>.'
         required: true
-        example: '2068-05-12'
+        example: '2057-10-11'
         type: string
         custom: []
       price:
         name: price
         description: ''
         required: true
-        example: 48533.851353
+        example: 22177.46
         type: number
         custom: []
     cleanBodyParameters:
-      name: quia
-      starting_date: '2023-07-05T18:27:37'
-      ending_date: '2068-05-12'
-      price: 48533.851353
+      name: illo
+      starting_date: '2023-07-05T18:41:26'
+      ending_date: '2057-10-11'
+      price: 22177.46
     fileParameters: []
     responses: []
     responseFields: []
@@ -185,28 +185,28 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: laboriosam
+        example: deleniti
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: true
-        example: consequatur
+        example: architecto
         type: string
         custom: []
       number_of_days:
         name: number_of_days
         description: ''
         required: true
-        example: 20
+        example: 14
         type: integer
         custom: []
     cleanBodyParameters:
       is_public: true
-      name: laboriosam
-      description: consequatur
-      number_of_days: 20
+      name: deleniti
+      description: architecto
+      number_of_days: 14
     fileParameters: []
     responses:
       -

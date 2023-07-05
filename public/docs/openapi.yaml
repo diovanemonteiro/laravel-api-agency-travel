@@ -61,15 +61,15 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: est
+                  example: ea
                 description:
                   type: string
                   description: ''
-                  example: dolores
+                  example: illum
                 number_of_days:
                   type: integer
                   description: ''
-                  example: 14
+                  example: 9
               required:
                 - name
                 - description
@@ -93,19 +93,19 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: quia
+                  example: illo
                 starting_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-07-05T18:27:37'
+                  example: '2023-07-05T18:41:26'
                 ending_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>starting_date</code>.'
-                  example: '2068-05-12'
+                  example: '2057-10-11'
                 price:
                   type: number
                   description: ''
-                  example: 48533.851353
+                  example: 22177.46
               required:
                 - name
                 - starting_date
@@ -175,15 +175,15 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: laboriosam
+                  example: deleniti
                 description:
                   type: string
                   description: ''
-                  example: consequatur
+                  example: architecto
                 number_of_days:
                   type: integer
                   description: ''
-                  example: 20
+                  example: 14
               required:
                 - name
                 - description
@@ -240,11 +240,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: alberto.hayes@example.net
+                  example: pamela37@example.com
                 password:
                   type: string
                   description: ''
-                  example: 'bXR$}A'
+                  example: '?~M5*~hiDvRi1'
               required:
                 - email
                 - password
