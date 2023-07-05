@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "TravelAPI",
-        "_postman_id": "2f441e01-2fb8-4b29-998a-167888af1358",
+        "_postman_id": "d18563a1-5d8c-4f5f-9fc3-1dd5c26aaeee",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"is_public\":true,\"name\":\"et\",\"description\":\"libero\",\"number_of_days\":9}"
+                            "raw": "{\"is_public\":true,\"name\":\"est\",\"description\":\"dolores\",\"number_of_days\":14}"
                         },
                         "description": "Creates a new Travel record."
                     },
@@ -90,7 +90,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"aut\",\"starting_date\":\"2023-07-05T18:21:28\",\"ending_date\":\"2026-05-18\",\"price\":1354758.22857}"
+                            "raw": "{\"name\":\"quia\",\"starting_date\":\"2023-07-05T18:27:37\",\"ending_date\":\"2068-05-12\",\"price\":48533.851353}"
                         },
                         "description": "",
                         "auth": {
@@ -129,7 +129,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"is_public\":false,\"name\":\"corporis\",\"description\":\"quia\",\"number_of_days\":19}"
+                            "raw": "{\"is_public\":true,\"name\":\"laboriosam\",\"description\":\"consequatur\",\"number_of_days\":20}"
                         },
                         "description": "Updates new Travel record."
                     },
@@ -176,7 +176,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"walker.nora@example.org\",\"password\":\"?]A0B8\\\/=7Y~X\"}"
+                            "raw": "{\"email\":\"alberto.hayes@example.net\",\"password\":\"bXR$}A\"}"
                         },
                         "description": "Login with the existing user.",
                         "auth": {
@@ -194,60 +194,6 @@
                             "header": [],
                             "code": 422,
                             "body": "{\"error\": \"The provided credentials are incorrect.\"}",
-                            "name": ""
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Endpoints",
-            "description": "",
-            "item": [
-                {
-                    "name": "GET api\/v1\/user",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/user",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/user"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
                             "name": ""
                         }
                     ]

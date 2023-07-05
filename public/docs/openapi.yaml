@@ -61,15 +61,15 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: et
+                  example: est
                 description:
                   type: string
                   description: ''
-                  example: libero
+                  example: dolores
                 number_of_days:
                   type: integer
                   description: ''
-                  example: 9
+                  example: 14
               required:
                 - name
                 - description
@@ -93,19 +93,19 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: aut
+                  example: quia
                 starting_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-07-05T18:21:28'
+                  example: '2023-07-05T18:27:37'
                 ending_date:
                   type: string
                   description: 'Must be a valid date. Must be a date after <code>starting_date</code>.'
-                  example: '2026-05-18'
+                  example: '2068-05-12'
                 price:
                   type: number
                   description: ''
-                  example: 1354758.22857
+                  example: 48533.851353
               required:
                 - name
                 - starting_date
@@ -171,19 +171,19 @@ paths:
                 is_public:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
                 name:
                   type: string
                   description: ''
-                  example: corporis
+                  example: laboriosam
                 description:
                   type: string
                   description: ''
-                  example: quia
+                  example: consequatur
                 number_of_days:
                   type: integer
                   description: ''
-                  example: 19
+                  example: 20
               required:
                 - name
                 - description
@@ -240,36 +240,14 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: walker.nora@example.org
+                  example: alberto.hayes@example.net
                 password:
                   type: string
                   description: ''
-                  example: '?]A0B8/=7Y~X'
+                  example: 'bXR$}A'
               required:
                 - email
                 - password
-      security: []
-  /api/v1/user:
-    get:
-      summary: ''
-      operationId: getApiV1User
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
       security: []
   /api/v1/travels:
     get:
@@ -367,9 +345,6 @@ tags:
     description: ''
   -
     name: 'Auth endpoints'
-    description: ''
-  -
-    name: Endpoints
     description: ''
   -
     name: 'Public endpoints'
